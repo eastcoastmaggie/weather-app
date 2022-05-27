@@ -21,7 +21,9 @@ async function searchLocation (){
       let resultData = await result.json();
       let locationName = weatherDiv.querySelector('h2');
       locationName.textContent = await resultData.name + ', ' + await resultData.sys.country;
-    
+      // show weather box
+      weatherDiv.classList.add('show');
+      weatherDiv.classList.remove('hidden');
       updateIcon(await resultData.weather[0].icon);
   
       let temp = tempInCelsius(await resultData.main.temp);
@@ -32,6 +34,8 @@ async function searchLocation (){
   
     }
     catch(error){
+      weatherDiv.classList.add('hidden');
+      weatherDiv.classList.remove('show');
       console.log(error);
     }
    
@@ -55,6 +59,8 @@ async function searchLocation (){
         return latLon;
       }
       catch(error) {
+        weatherDiv.classList.add('hidden');
+        weatherDiv.classList.remove('show');
         console.error('Error:', error);
       };
 
