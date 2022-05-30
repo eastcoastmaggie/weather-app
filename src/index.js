@@ -71,7 +71,7 @@ async function searchLocation (){
   }
   
   async function getIconURL(icon){
-    return `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    return `${url}img/wn/${icon}@2x.png`;
   }
   async function updateIcon(icon){
     image.src = await getIconURL(icon);
