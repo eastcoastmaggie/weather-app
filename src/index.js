@@ -17,7 +17,7 @@ const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/
 
 // API call
 const apiKey = '2990c27b5e7589f1dfc4e868f54f6b17';
-const url = 'http://api.openweathermap.org/';
+const url = 'https://api.openweathermap.org/';
 const geocodeEndPoint = 'geo/1.0/direct?q=';
 const weatherEndPoint = 'data/2.5/onecall?';
 
